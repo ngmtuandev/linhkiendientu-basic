@@ -15,7 +15,7 @@ const SliderMain = () => {
         <Slider {...settings}>
             {
                 slide.map((item, index) => (
-                    <div className='p-5'>
+                    <div key={index} className='p-5'>
                         <img className='h-full' src={item.image} alt="" />
                     </div>
                 ))

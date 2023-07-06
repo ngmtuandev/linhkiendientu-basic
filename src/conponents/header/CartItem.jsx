@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useSelector} from 'react'
 
 const CartItem = () => {
+  const {dataPrd} = useSelector(state => state.cart)
+
+  console.log('data cart', dataPrd)
   return (
-    <div>CartItem</div>
+    <div>
+      <div>
+      </div>
+    </div>
   )
 }
 

@@ -2,13 +2,15 @@ import React from 'react'
 import icons from '../../asset/icons'
 import Cart from './Cart'
 import User from './User'
+import { Link } from 'react-router-dom'
+import path from '../../ultis/path'
 
 const header = () => {
   const  {AiOutlineRight, AiOutlineUser} = icons
   return (
     <div className='flex justify-between px-[20px] py-[10px] items-center bg-gray-800 text-gray-50'>
       <div className='flex w-[40%]'>
-        <span className='mr-[20px] cursor-pointer hover:text-green-300 '>Trang Chủ</span>
+        <span className='mr-[20px] cursor-pointer hover:text-green-300 '><Link to={path.HOME}>Trang Chủ</Link> </span>
         <span className='mr-[20px] cursor-pointer hover:text-green-300 '>Sản phẩm</span>
         <span className='cursor-pointer hover:text-green-300 '>Về chúng tôi</span>
       </div>

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {memo} from 'react'
 import {product} from '../../asset/dataweb/data'
 import icon from '../../asset/icons'
+import { Link } from 'react-router-dom'
 const Product = () => {
   const {FaCartPlus} = icon
   return (
@@ -9,7 +10,8 @@ const Product = () => {
       <div className='grid grid-cols-4 gap-9'>
         {
           product.map((item) => (
-            <div key={item.id} className='mb-8'>
+          <Link key={item.id} to={`san-pham/${item.id}`}>
+            <div  className='mb-8'>
               <div className='relative group/item'>
                 <img src={item.cover} alt='product' className=''></img>
                 <div className='group/edit absolute hidden cursor-pointer group-hover/item:block top-0 
@@ -24,6 +26,7 @@ const Product = () => {
                 <span className='font-bold'>{item.price} VNĐ</span>
               </div>
             </div>
+          </Link>
           ))
         }
       </div>
@@ -31,4 +34,4 @@ const Product = () => {
   )
 }
 
-export default Product
+export default memo(Product)
