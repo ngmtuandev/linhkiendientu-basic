@@ -10,9 +10,10 @@ const SliderMain = () => {
         slidesToShow: 1,
         slidesToScroll: 1
       };
+
+      
   return (
-    <div className='h-170px'>
-        <Slider {...settings}>
+        <div>
             {
                 slide.map((item, index) => (
                     <div key={index} className='p-5'>
@@ -20,8 +21,7 @@ const SliderMain = () => {
                     </div>
                 ))
             }
-        </Slider>
-    </div>
+        </div>
   )
 }
 

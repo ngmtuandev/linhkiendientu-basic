@@ -5,7 +5,7 @@ import Product from '../conponents/products/Product'
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       <SliderMain></SliderMain>
       <Category></Category>
       <Product></Product>

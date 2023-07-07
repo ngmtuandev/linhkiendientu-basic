@@ -13,7 +13,8 @@ const cartReducer = (state = initState, action) => {
                 id: action.dataPrd.id  ,
                 name: action.dataPrd.name,
                 desc: action.dataPrd.desc,
-                img: action.dataPrd.cover  
+                img: action.dataPrd.cover,
+                price: action.dataPrd.price
             }
             return {
                 ...state,
