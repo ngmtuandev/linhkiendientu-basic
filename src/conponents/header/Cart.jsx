@@ -50,15 +50,14 @@ const Cart = () => {
         }
 
 {
-            !isLogin && !stateCart && (
-                <div className='w-[100%] mt-6 absolute right-[0px] '>
-                <div className='bg-gradient-to-r from-orange-500 to-orange-600 p-5 flex flex-col items-center justify-center'>
-                  <h3 className='text-[27px] flex items-center justify-center'>ĐĂNG NHẬP ĐỂ XEM GIỎ HÀNG</h3>
-                  <img className='w-[60%]'
-                   src='https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-4816550-4004141.png' alt=''></img>
-                </div>
-            </div>
-            )
+            //  stateCart && (
+            //     <div className='w-[100%] mt-6 absolute right-[0px] '>
+            //     <div className='bg-gradient-to-r from-orange-500 to-orange-600 p-5 flex flex-col items-center justify-center'>
+            //       <img className='w-[60%]'
+            //        src='https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-4816550-4004141.png' alt=''></img>
+            //     </div>
+            // </div>
+            // )
         }
         
     </div>
