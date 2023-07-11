@@ -53,7 +53,7 @@ const authController = {
                     )
 
                 res.status(200).json({findUser, createToken})
-                console.log({findUser, createToken})
+                // console.log({findUser, createToken})
             }
 
         } catch (error) {

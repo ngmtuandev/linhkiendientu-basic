@@ -1,8 +1,9 @@
 const router = require('express').Router()
 const userController = require('../controller/userController')
+const {verifyAccessToken, verifyAdmin} = require('../controller/verifyTokenMiddleware')
 
-router.get('/', userController.getAllUser)
+router.get('/', verifyAccessToken , userController.getAllUser)
 
-router.delete('/:id', userController.deleteUser)
+router.delete('/:id',[verifyAccessToken, verifyAdmin] ,userController.deleteUser)
 
 module.exports = router
