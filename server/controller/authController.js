@@ -49,14 +49,24 @@ const authController = {
                         isAdmin: findUser.isAdmin
                     },
                     process.env.ACCESS_TOKEN,
-                    {expiresIn: '600s'}
+                    {expiresIn: '80s'}
                     )
-
-                res.status(200).json({findUser, createToken})
+                
+                // const createNewRefreshToken = jwt.sign(
+                //     {
+                //         id: findUser.id,
+                //         isAdmin: findUser.isAdmin
+                //     },
+                //     process.env.REFRESH_TOKEN,
+                //     {expiresIn: '1d'}
+                //     )
+                    
+                res.status(200).json({findUser, createToken, createNewRefreshToken})
                 // console.log({findUser, createToken})
             }
 
         } catch (error) {
+            console.log(error)
             res.status(500).json(error)
             console.log('LỖI')
         }
